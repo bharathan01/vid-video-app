@@ -20,6 +20,7 @@ export const AppContext = (props) => {
       // setsearchResults(res);
     });
     setLoading(false);
+}
     return (
       <Context.Provider
         value={{
@@ -35,5 +36,4 @@ export const AppContext = (props) => {
         {props.children}
       </Context.Provider>
     );
-  };
 };
