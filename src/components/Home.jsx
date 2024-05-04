@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Feeds from "../components/Feeds"
+import SideMenu from './SideMenu'
 function Home() {
   return (
-    <div className='text-red-600'>Home</div>
+    <div className='flex'>
+    <SideMenu/>
+    <Feeds/>
+    </div>
   )
 }
 

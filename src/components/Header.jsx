@@ -8,7 +8,7 @@ import { RiVideoAddLine } from "react-icons/ri";
 
 export default function Header() {
   return (
-    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black">
+    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black overflow-x-hidden">
       <div className="flex items-center gap-4">
         <div className="w-8 h-9 flex flex-col justify-center items-center gap-1 rounded-full hover:bg-[#303030]/[0.6]">
           <span className="w-4 h-px bg-white"></span>

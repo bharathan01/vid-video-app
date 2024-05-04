@@ -9,9 +9,9 @@ export const AppContext = (props) => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  useEffect(() => {
-    fetchDataFromApi(selectedCategory);
-  }, [selectedCategory]);
+  // useEffect(() => {
+  //   fetchDataFromApi(selectedCategory);
+  // }, [selectedCategory]);
 
   const fetchDataFromApi = (quary) => {
     setLoading(true);
