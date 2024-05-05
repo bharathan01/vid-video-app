@@ -12,7 +12,7 @@ function SideMenu() {
 
   return (
     <div className={`md:block overflow-y-auto h-full px-4 bg-black absolute  translate-x-[-240px] md:translate-x-0 transition-all overflow-x-hidden ${
-      mobileMenu ? "w-[76px]" : "w-[240px] "
+      mobileMenu ? "w-[85px]" : "w-[240px] "
   }`}>
       {categories.map((e) => {
         return (
