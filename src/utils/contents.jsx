@@ -9,9 +9,24 @@ import { ImNewspaper } from "react-icons/im";
 import { GiDiamondTrophy, GiEclipse } from "react-icons/gi";
 import { RiLightbulbLine, RiFeedbackLine } from "react-icons/ri";
 import { FiSettings, FiHelpCircle } from "react-icons/fi";
+import { SiYoutubeshorts } from "react-icons/si";
+import { MdOutlineSubscriptions } from "react-icons/md";
+import { MdHistory } from "react-icons/md";
+import { CgPlayList } from "react-icons/cg";
+import { MdOutlineWatchLater } from "react-icons/md";
+import { BiSolidLike } from "react-icons/bi";
+
 
 export const categories = [
     { name: "New", icon: <AiFillHome />, type: "home" },
+    { name: "Shorts", icon: <SiYoutubeshorts />, type: "Shorts" },
+    { name: "Subscriptions", icon: <MdOutlineSubscriptions />, type: "Subscriptions" ,divider: true },
+
+    { name: "History", icon: <MdHistory />, type: "You" },
+    { name: "Playlists", icon: <CgPlayList />, type: "You" },
+    { name: "Watch later", icon: <MdOutlineWatchLater />, type: "You" },
+    { name: "Liked videos", icon: <BiSolidLike />, type: "You",divider: true },
+
     { name: "Trending", icon: <MdLocalFireDepartment />, type: "category" },
     { name: "Music", icon: <CgMusicNote />, type: "category" },
     { name: "Films", icon: <FiFilm />, type: "category" },
