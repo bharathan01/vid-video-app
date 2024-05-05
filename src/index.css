@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    overflow-x: hidden;
+
+::-webkit-scrollbar {
+    width: 10px;
 }
+::-webkit-scrollbar-track {
+   background: black;
+  }
+::-webkit-scrollbar-thumb {
+    background: rgb(103, 102, 102); 
+  }

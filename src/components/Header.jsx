@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import ytLogo from "../image/yt-logo.png";
 import logo from "../image/yt-logo-mobile.png"
 
 import { IoIosSearch } from "react-icons/io";
 import { FiBell } from "react-icons/fi";
 import { RiVideoAddLine } from "react-icons/ri";
+import { Context } from "../context/AppContext";
 
 export default function Header() {
+  const {mobileMenu , setMobileMenu} = useContext(Context)
   return (
     <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black overflow-x-hidden">
       <div className="flex items-center gap-4">
-        <div className="w-8 h-9 flex flex-col justify-center items-center gap-1 rounded-full hover:bg-[#303030]/[0.6]">
+        <div className="w-8 h-9 flex flex-col justify-center items-center gap-1 rounded-full hover:bg-[#303030]/[0.6]"
+        onClick={()=>setMobileMenu(!mobileMenu)}>
           <span className="w-4 h-px bg-white"></span>
           <span className="w-4 h-px bg-white"></span>
           <span className="w-4 h-px bg-white"></span>

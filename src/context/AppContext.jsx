@@ -1,7 +1,8 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { fetchYoutubeData } from "../utils/api";
 
 export const Context = new createContext(null);
+
 
 export const AppContext = (props) => {
   const [loading, setLoading] = useState(false);
@@ -17,7 +18,7 @@ export const AppContext = (props) => {
     setLoading(true);
     fetchYoutubeData(`search/?q=${quary}`).then((res) => {
       console.log(res);
-      // setsearchResults(res);
+      setsearchResults(res);
     });
     setLoading(false);
 }
