@@ -3,14 +3,16 @@ import SingleFeedBox from "./SingleFeedBox";
 import { Context } from "../context/AppContext";
 
 export default function Feeds() {
-  const ARR = [1, 2, 3, 45, 6, 7, 8, 9, 0];
+  const {loading, searchResults } = useContext(Context);
   return (
     <div className="flex flex-wrap gap-3">
-      {ARR.map((e) => {
-        return (
-          <SingleFeedBox />
-        )
-      })}
+      {!loading &&
+        searchResults.map((item) => {
+          if (item.type !== "video") return false;
+          return <SingleFeedBox 
+                 key={item?.video?.videoId} 
+                 video={item?.video} />;
+        })}
     </div>
   );
 }

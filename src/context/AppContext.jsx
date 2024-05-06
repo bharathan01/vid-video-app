@@ -10,15 +10,15 @@ export const AppContext = (props) => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  // useEffect(() => {
-  //   fetchDataFromApi(selectedCategory);
-  // }, [selectedCategory]);
+  useEffect(() => {
+    fetchDataFromApi(selectedCategory);
+  }, [selectedCategory]);
 
   const fetchDataFromApi = (quary) => {
     setLoading(true);
-    fetchYoutubeData(`search/?q=${quary}`).then((res) => {
-      console.log(res);
-      setsearchResults(res);
+    fetchYoutubeData(`search/?q=${quary}`).then(({contents}) => {
+      console.log()
+      setsearchResults(contents);
     });
     setLoading(false);
 }

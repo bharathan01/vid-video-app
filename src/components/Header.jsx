@@ -1,27 +1,32 @@
 import React, { useContext } from "react";
 import ytLogo from "../image/yt-logo.png";
-import logo from "../image/yt-logo-mobile.png"
+import logo from "../image/yt-logo-mobile.png";
 
 import { IoIosSearch } from "react-icons/io";
 import { FiBell } from "react-icons/fi";
 import { RiVideoAddLine } from "react-icons/ri";
 import { Context } from "../context/AppContext";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  const {mobileMenu , setMobileMenu} = useContext(Context)
+  const { mobileMenu, setMobileMenu } = useContext(Context);
   return (
     <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black overflow-x-hidden">
       <div className="flex items-center gap-4">
-        <div className="w-8 h-9 flex flex-col justify-center items-center gap-1 rounded-full hover:bg-[#303030]/[0.6]"
-        onClick={()=>setMobileMenu(!mobileMenu)}>
+        <div
+          className="w-8 h-9 flex flex-col justify-center items-center gap-1 rounded-full hover:bg-[#303030]/[0.6]"
+          onClick={() => setMobileMenu(!mobileMenu)}
+        >
           <span className="w-4 h-px bg-white"></span>
           <span className="w-4 h-px bg-white"></span>
           <span className="w-4 h-px bg-white"></span>
         </div>
-        <div className="w-24 h-5 flex items-center">
-          <img src={ytLogo} className="h-full hidden dark:md:block" />
-          <img src={logo} className="h-full dark:md:hidden" />
-        </div>
+        <Link to={'/'}>
+          <div className="w-24 h-5 flex items-center">
+            <img src={ytLogo} className="h-full hidden dark:md:block" />
+            <img src={logo} className="h-full dark:md:hidden" />
+          </div>
+        </Link>
       </div>
       <div>
         <div className="flex h-8 md:h-10  md:pl-5 border border-[#303030] rounded-3xl group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0">
